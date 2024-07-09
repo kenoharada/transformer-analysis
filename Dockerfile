@@ -7,6 +7,7 @@ RUN apt-get update -y && apt-get install -y sudo
 # 必要なパッケージをインストール
 RUN pip install setuptools wandb transformers deepspeed openai tiktoken PyYAML accelerate datasets einops evaluate peft protobuf scikit-learn scipy sentencepiece fire mpi4py jupyterlab
 RUN pip install python-dotenv xopen rouge-score
+RUN pip install ipywidgets transformer_lens circuitsvis plotly
 # ビルド時の引数としてユーザー名とグループ名、ユーザーID、グループIDを受け取る
 ARG user_name
 ARG group_name
